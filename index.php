@@ -1,9 +1,8 @@
-
 <?php
 
  require_once __DIR__ . '/src/autoload.php';
  require_once __DIR__ . '/src/const.php';
- 
+
  use App\component\httpComponent\Request;
  use App\component\httpComponent\Response;
  use App\component\Routing;
@@ -17,39 +16,31 @@
  $matcher = new routing\matcher\RouteMatcher($routes);
 
 
+
  try{
+   //does the matcher find the route
 
-    //does the matcher find the route
+   if($matcher->routeFound($url)){
 
-    if($matcher->routeFound($url)){
+      session_start();
 
-        session_start();
+      $controller = new $routes[$url]["controller"];
+      $method = $routes[$url]["method"];
+      $parameters = $routes[$url]["parameters"];
 
-        $controller = new $routes[$url]["controller"];
-        $method = $routes[$url]["method"];
-        $parameters = $routes[$url]["parameters"];
+      $response = call_user_func_array([$controller,$method] , $parameters );
 
-        $response = call_user_func_array([$controller,$method] , $parameters );
-        
     } else {
 
         $response = new Response("route not found");
     }
 
  } catch(Exception $e){
-  
-    $response = new Response("an error occured");
-    $response->setStatusCode(500);
 
+    $response = new Response($e);
+    $response->setStatusCode(500);
+    
  }
 
 
-
  $response->send();
-
-
-
-
-
-
-

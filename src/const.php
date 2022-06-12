@@ -1,11 +1,8 @@
 <?php
 
-  define("rootUrl" , "/theoweb/");
+  define("rootUrl" , "/AFB/");
   define("dbUsername" , "root");
-  define("dbPassword" , "");
+  define("dbPassword" , "root");
   define("dbHost" , "localhost");
-  define("dbName" , "theodb");
-  define("admin" , "theoadmin");
-
-
-
+  define("dbName" , "AFB");
+  define("admin" , "");

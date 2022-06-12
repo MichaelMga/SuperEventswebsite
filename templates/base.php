@@ -11,15 +11,15 @@
   </head>
 
    <body>
-  
-     <header> 
-     
-       <div id="navBar">
 
+     <header>
+
+       <div id="navBar">
+         
 
           <div id="navBarA">
 
-             <a href="<?php echo rootUrl ?>"><img src="public/assets/img/theologo.png"></a>
+             <a href="<?php echo rootUrl ?>"><img src="public/assets/img/afbLogo.png"></a>
 
           </div>
 
@@ -27,35 +27,8 @@
           <div  id="navBarB">
 
 
-          <?php
-
- 
-             if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == true){
-
-
-                if($_SESSION["username"] == admin){
-                    echo "<a href='" . rootUrl . "projects'><img class='navImg' src='public/assets/img/foldernav.png'></a>";
-                    echo "<a href='" . rootUrl . "newProject'><img class='newProjectImg' src='public/assets/img/newProject.png'></a>";
-                 } 
-
-                 echo "<a href='" . rootUrl . "bLogout'><img class='navImg' src='public/assets/img/logout.png'></a>";
-
-  
-             } else {
-                echo "<a href='" . rootUrl . "login'><img class='navImg' src='public/assets/img/login.png'></a>"; 
-                echo "<a href='" . rootUrl . "register'><img class='navImg' src='public/assets/img/registerNav.png'></a>";
-             }
-
-
- 
-          ?>   
- 
-
 
           </div>
-
-       
-
 
 
        </div>
@@ -64,4 +37,3 @@
 
 
    <main>
-   

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\controllers\abstractClass; 
+namespace App\controllers\abstractClass;
 use App\Component\HttpComponent\Response;
 use App\model\orm\SuperOrm;
 
@@ -16,38 +16,7 @@ abstract class AbstractController
    }
 
 
-   public function renderHome() : Response
-   {
-
-      ob_start();
-
-      include "templates/base.php";
-
-      if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == true){
-
-          if($_SESSION["username"] == admin){
-
-            header("Location:" . rootUrl . "users" );
-
-          } else {
-             header("Location:" . rootUrl . "user?id=" . $_SESSION["user_id"] );
-          }   
-
-       } else {
-
-            header("Location:" . rootUrl . "login" );
-
-       }
-
-
-
-       $content = ob_get_clean();
-       return new Response($content);
-
-   }   
-
-
-   public function renderPage($page, $array=[]) : Response
+   protected function renderPage($page, $array=[]) : Response
    {
 
       extract($array);
@@ -57,13 +26,11 @@ abstract class AbstractController
       include "templates/$page.php";
       include "templates/footer.php";
 
-      
-
 
       $content = ob_get_clean();
       return new Response($content);
 
-   }   
+   }
 
 
 

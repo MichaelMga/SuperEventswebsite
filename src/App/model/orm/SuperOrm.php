@@ -24,7 +24,7 @@ class SuperOrm
 
 
    public function getRepository(string $entityName)
-   { 
+   {
 
       return new Repository($this->conn, $entityName);
 

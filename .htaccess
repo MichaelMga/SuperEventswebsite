@@ -3,4 +3,7 @@ RewriteBase /
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /theoweb/index.php [L]
+RewriteRule . /AFB/index.php [L]
+ExpiresActive On
+ExpiresDefault A1
+Header append Cache-Control must-revalidate

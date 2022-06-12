@@ -1,0 +1,100 @@
+
+MVC element
+
+Problems of my implementation ==>
+
+
+I believe there are some real string issues.
+
+
+The implementation.
+
+
+A try catch {
+
+
+}
+
+
+rendering a Response() => sending it.
+
+
+Maths are teaching me so much.
+
+
+My main thn
+
+
+Is my mySQL database running?
+
+
+
+
+This is hell. I can't debug it as I don't get any error return.
+
+
+I have an error when I'm calling an unexisting file in my controller, but not when the file I'm calling calls a file that doesn't exist.
+
+Maybe should I just relaunch the server?
+
+Ok, totally unplug this behaviour. The only thing is memorize this set of bits. No room for any frustration.
+
+
+It looks there is a workflow issue with the browser.
+
+
+
+Well, I can't debug this thing.
+
+Ok, better.
+
+Interesting. It looks like the apache server doesn't break on error. I guess it's settable.
+
+
+However, my implementation is very problematic as files are called arbitrarily in order.
+
+Then, I don't redefine variables.
+
+I should handle that now.
+
+I should create myself a Jira system, to remember all the thi
+
+
+How to have Javascript to work with it.
+
+What's the good way to structure this project?
+
+I don't know. You could have a structure
+
+
+  base
+
+    template -> script
+
+  footer
+
+
+  (inconvenient => mix)
+
+
+  base -> all js
+
+     template
+
+  footer
+
+  ( inconvenient => unnceccesarry execution )
+
+
+
+  -----
+
+  Problem ==> How about I need to use common JS for several pages.
+
+  A possible solution would be to insert a scriot tag, directly into the element.
+
+
+  .htaccess
+
+
+  I don't exactly understand what's going on in the backend.
