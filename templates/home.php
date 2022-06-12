@@ -5,18 +5,14 @@
 
 
 <form id="myForm" action="<?php echo rootUrl ?>?event=" method="post">
-   <input type="text" placeholder="search your event">
-   <button>Chercher</button>
+   <input id="eventInput" type="text" placeholder="search your event">
+   <button onclick="executeLoadingScript(event)">Chercher</button>
 </form>
 
 <script>
 
-  window.onload = () => executeLoadingScript();
-
-  const executeLoadingScript = () => {
-
-    document.getElementById("myForm").action+="value";
-
+  const executeLoadingScript = (event) => {
+    document.getElementById("myForm").action += document.getElementById("eventInput").value;
   }
 
 </script>
