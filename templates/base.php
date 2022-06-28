@@ -15,7 +15,7 @@
      <header>
 
        <div id="navBar">
-         
+
 
           <div id="navBarA">
 
@@ -26,7 +26,7 @@
 
           <div  id="navBarB">
 
-
+             <button> Créer un évènement </button>
 
           </div>
 
