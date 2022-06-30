@@ -8,6 +8,15 @@
        <script src="https://js.stripe.com/v3/"></script>
        <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Arvo:ital@1&display=swap" rel="stylesheet">
+
+      <style>
+
+      .mainImage{
+        margin-top: 5px;
+        margin-left: 5px;
+      }
+      
+      </style>
   </head>
 
    <body>
@@ -26,7 +35,7 @@
 
           <div  id="navBarB">
 
-             <button> Créer un évènement </button>
+            <button> Créer un évènement </button>
 
           </div>
 

@@ -98,3 +98,72 @@ I don't know. You could have a structure
 
 
   I don't exactly understand what's going on in the backend.
+
+
+  ------
+
+  28/06
+
+  What should I do?
+
+  Build the most interesting tree there is.
+
+  Let's build dad a business, and retain the system.
+
+  I did create what we call a template page.
+
+
+  Basically, when the software parses the code, the information passed in the url are read.
+
+
+  What's the best solution to take notes.
+
+  I'd like to have a system that easily allows me to get structured info.
+
+
+  What does that mean?
+
+  My problem is that my note taking finishes in trash.
+
+  I could have a system forcing myself to format my notes?
+
+  Like, impossible to save the note if the text is not humanly readable.
+
+  I may want to use React in that thing dude.
+
+  I also may want to interest in what webpack is, and why it is useful.
+
+  //
+
+
+  I want dad to simply make a db request and build a project if it doesn't exist.
+
+  I probably should stabilize the whole structure.
+
+
+
+ -----
+
+
+ Security
+
+ Design => Copy instagram
+
+
+------
+
+Technically, this is the heart of the whole thing.
+
+
+-------
+
+
+Alright, I realize I make a really really hard job.
+
+How to proceed there?
+
+I need to go step by step.
+
+So, first of all I need to have a system allowing me to store the whole technical history.
+
+Is it the case? Else, I need to build modules.
