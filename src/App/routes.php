@@ -2,5 +2,7 @@
 
  $routes = [
   rootUrl => ["name" => "home", "controller" => "App\Controllers\FrontController" , "method" =>  "displayPage" , "parameters" => ["home", []]  ] ,
-  rootUrl . 'testEvent' => ["name" => "create", "controller" => "App\Controllers\FrontController" , "method" =>  "displayPage" , "parameters" => ["events/test", []]  ]
+  rootUrl . 'testEvent' => ["name" => "create", "controller" => "App\Controllers\FrontController" , "method" =>  "displayPage" , "parameters" => ["events/test", []]  ],
+  rootUrl . 'payment' => ["name" => "login", "controller" => "App\Controllers\FrontController" , "method" =>  "displayPage" , "parameters" => ["payment/stripeForm", []]  ]
+
   ];
