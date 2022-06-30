@@ -12,10 +12,21 @@
       <style>
 
       .mainImage{
+        width: 95%;
+        height: 95%;
+      }
+
+      .mainImageContainer{
         margin-top: 5px;
         margin-left: 5px;
+        width: 300px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
       }
-      
+
       </style>
   </head>
 
@@ -27,9 +38,7 @@
 
 
           <div id="navBarA">
-
              <a href="<?php echo rootUrl ?>"><img src="public/assets/img/afbLogo.png"></a>
-
           </div>
 
 

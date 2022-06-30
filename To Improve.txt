@@ -1,0 +1,10 @@
+
+Unclean choices (to be improved later) :
+
+
+- Turn the routes arrays into class instances.
+- Don't write raw html but use constants instead.
+- Store style and script files into modules
+
+
+---

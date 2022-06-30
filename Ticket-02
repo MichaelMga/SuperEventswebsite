@@ -1,0 +1,4 @@
+
+How to technically handle the display?
+
+Simply only allow a certain image format, then flaten images later on.
