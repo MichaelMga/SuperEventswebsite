@@ -12,6 +12,12 @@
 
        function createNewEvent () : Response {
 
+         $entityManager = $this->getEntityManager();
+
+         if($entityManager){
+            return new Response("we just reached the entityManager!!");
+         }
+
          return new Response("new event created :) ");
 
        }
