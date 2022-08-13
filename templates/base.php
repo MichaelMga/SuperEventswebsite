@@ -44,8 +44,6 @@
 
           <div  id="navBarB">
 
-            <button> Créer un évènement </button>
-
           </div>
 
 

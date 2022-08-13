@@ -3,10 +3,9 @@
 namespace App\model\database\table\handlers;
 
 
-
 class RowHandler
 {
-    
+
     private $table;
     private $conn;
 
@@ -17,7 +16,7 @@ class RowHandler
 
     }
 
-    public function insertRow($properties, $values) : void
+    public function insertRow($properties, $values)
     {
         try{
             $sql = "INSERT INTO $this->table($properties) VALUES ($values)";
@@ -28,15 +27,20 @@ class RowHandler
         {
             echo $e->getMessage();
         }
-  
-        
+
+
     }
 
 
 
-    public function findRowFromId(string $id)
+    public function findRowFromId($id)
     {
         try{
+
+            if($id === null){
+               return;
+            }
+
             $sql = "SELECT * FROM $this->table WHERE id=:id" ;
             $stmt = $this->conn->prepare($sql);
             $stmt->execute([":id" => $id]);
@@ -94,9 +98,9 @@ class RowHandler
 
 
 
-    
+
     public function findRowFromProperties(array $array)
-    {      
+    {
            $whereEncodedChain = "";
            $wherePrepareArray = [];
 
@@ -115,8 +119,8 @@ class RowHandler
               $i++;
 
            }
-           
-    
+
+
 
         try{
             $sql = "SELECT * FROM $this->table WHERE $whereEncodedChain" ;
@@ -183,7 +187,7 @@ class RowHandler
          $i++;
 
       }
-      
+
 
 
      try{
@@ -294,7 +298,7 @@ class RowHandler
     }
 
 
-    
+
     public function getAllRowsFromPropertiesSortedBy(array $array, $sortTarget, $sortDirection)
     {
       $whereEncodedChain = "";
@@ -315,7 +319,7 @@ class RowHandler
          $i++;
 
       }
-      
+
 
 
      try{
@@ -362,7 +366,7 @@ class RowHandler
         $stmt->execute();
         $result = $stmt->fetchAll();
 
-        
+
         return $result[0];
     }
 
@@ -370,7 +374,7 @@ class RowHandler
 
     public function getAllRowsWherePropertyLike($property, $string)
     {
-      
+
       $sql = "SELECT * FROM $this->table WHERE $property LIKE '%:string%'" ;
       $stmt = $this->conn->prepare($sql);
       $stmt->execute([':string' => $string]);

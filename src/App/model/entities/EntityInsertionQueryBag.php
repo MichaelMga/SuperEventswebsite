@@ -20,11 +20,11 @@ class EntityInsertionQueryBag
        $columns = "";
        $values = "";
 
-       $propertiesAndValues = $this->entity->getPropertiesAndValues();
+       //$propertiesAndValues = $this->entity->getPropertiesAndValues();
 
-       foreach($propertiesAndValues as $property => $value )
+       foreach(get_object_vars($this->entity) as $property => $value )
        {
-          if($property !== "table" && $property !== "ID"){
+          if($property !== "table" && $property !== "id"){
 
              $columns .= $property . ",";
 
@@ -35,12 +35,12 @@ class EntityInsertionQueryBag
                 $values .= "'" . $value . "'" . ",";
              }
           }
-   
+
        }
 
        //removing the last ","
 
-       $this->columnsString = substr($columns,0,-1); 
+       $this->columnsString = substr($columns,0,-1);
        $this->valuesString = substr($values,0,-1);
     }
 

@@ -1,7 +1,0 @@
-
-- Create an event builder AFB 01.
-
-- Create an event page. AFB 02.
-
-
-----

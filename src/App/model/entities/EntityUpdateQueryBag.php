@@ -3,7 +3,7 @@
 namespace App\model\entities;
 
 class EntityUpdateQueryBag
-{  
+{
     private $updateQuery;
 
 
@@ -17,13 +17,12 @@ class EntityUpdateQueryBag
     {
        $updateQuery = "";
 
-       $propertiesAndValues = $this->entity->getPropertiesAndValues();
+       //$propertiesAndValues = $this->entity->getPropertiesAndValues();
 
-       foreach($propertiesAndValues as $property => $value )
+       foreach($entity as $property => $value )
        {
           if($property !== "table" && $property !== "ID"){
 
-            
             if(gettype($value) !== "integer")
             {
                $value = "'$value'";
@@ -32,25 +31,19 @@ class EntityUpdateQueryBag
              $updateQuery .= "$property = $value" . ",";
 
           }
-   
        }
 
        //removing the last ","
+       
+       $this->updateQuery = substr($updateQuery,0,-1);
 
-       $this->updateQuery = substr($updateQuery,0,-1); 
     }
 
 
     public function getUpdateQuery()
     {
-        return $this->updateQuery;
+      return $this->updateQuery;
     }
 
-  
 
 }
-
-
-
-
-
