@@ -24,6 +24,17 @@
         return new Response("anniv mathéo created!!");
 
        }
+
+       function displayEvent(string $eventCode) : Response {
+
+         //$event = $this->getRepository(Event::class)->getBy("eventCode", $eventCode);
+
+         //$eventName = $event->getName();
+
+         $eventName = "Anniversaire Mike";
+
+         return $this->renderPage("events/page", ["eventName" => $eventName]);
+       }
    }
 
  ?>
