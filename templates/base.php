@@ -28,6 +28,7 @@
       }
 
       </style>
+
   </head>
 
    <body>
@@ -36,16 +37,13 @@
 
        <div id="navBar">
 
-
           <div id="navBarA">
              <a href="<?php echo rootUrl ?>"><img src="public/assets/img/afbLogo.png"></a>
           </div>
 
-
-          <div  id="navBarB">
+          <div  id="navBarB" >
 
           </div>
-
 
        </div>
 
