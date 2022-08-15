@@ -32,11 +32,11 @@
 
            echo "this entity was not found";
            return false;
-           
+
        }
 
        //convert it into an object
-   
+
     }
 
 
@@ -51,12 +51,12 @@
             $entity = $rowConverter->getObject();
 
             return $entity;
-    
+
         } else {
             //echo "this row was not found";
             return false;
         }
- 
+
     }
 
 
@@ -66,41 +66,41 @@
     {
 
             $entities = [];
-            
+
             $rows = $this->tableConn->getRowHandler()->getAllRowsFromProperty($property,$value);
 
             foreach($rows as $row)
-            {       
+            {
                $rowConverter = new RowToObjectConverter($row, $this->table);
                $entity = $rowConverter->getObject();
 
                $entities[] = $entity;
             }
- 
+
             return $entities;
-    
-    
- 
+
+
+
     }
 
-        
+
 
     public function getAllElementsFromProperties(array $array)
     {
-        
+
      $entities = [];
-            
+
      $rows = $this->tableConn->getRowHandler()->getAllRowsFromProperties($array);
-     
+
 
       foreach($rows as $row)
-      {       
+      {
                $rowConverter = new RowToObjectConverter($row, $this->table);
                $entity = $rowConverter->getObject();
 
                $entities[] = $entity;
       }
- 
+
 
       return $entities;
 
@@ -112,13 +112,13 @@
 
     public function getAllElementsFromPropertySortedBy($property, $value, $sortTarget, $sortDirection)
     {
-        
+
         $entities = [];
-            
+
         $rows = $this->tableConn->getRowHandler()->getAllRowsFromPropertySortedBy($property,$value, $sortTarget, $sortDirection);
 
         foreach($rows as $row)
-        {       
+        {
            $rowConverter = new RowToObjectConverter($row, $this->table);
            $entity = $rowConverter->getObject();
 
@@ -133,26 +133,26 @@
 
 
 
-    
+
     public function getAllElementsFromPropertiesSortedBy(array $array, $sortTarget, $sortDirection)
     {
 
         $entities = [];
-            
+
         $rows = $this->tableConn->getRowHandler()->getAllRowsFromPropertiesSortedBy($array, $sortTarget, $sortDirection);
-        
-   
+
+
          foreach($rows as $row)
-         {       
+         {
                   $rowConverter = new RowToObjectConverter($row, $this->table);
                   $entity = $rowConverter->getObject();
-   
+
                   $entities[] = $entity;
          }
-    
-   
+
+
          return $entities;
-   
+
 
 
     }
@@ -163,7 +163,7 @@
         $entities = [];
 
         $rows = $this->tableConn->getRowHandler()->getAllRows();
-    
+
 
          foreach($rows as $row){
 
@@ -179,13 +179,13 @@
 
 
      public function getAllSortedy($sortTarget, $sortDirection)
-     
+
      {
 
         $entities = [];
 
         $rows = $this->tableConn->getRowHandler()->getAllRowsSortedBy($sortTarget, $sortDirection);
-    
+
 
          foreach($rows as $row){
 
@@ -206,7 +206,7 @@
         $entities = [];
 
         $rows = $this->tableConn->getRowHandler()->getAllRowsWherePropertyLike($property,$string);
-    
+
          foreach($rows as $row){
 
             $rowConverter = new RowToObjectConverter($row, $this->table);
