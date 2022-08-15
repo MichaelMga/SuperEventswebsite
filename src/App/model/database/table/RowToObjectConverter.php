@@ -2,7 +2,8 @@
 
 namespace App\model\database\table;
 
-use App\model\entities\Entity;
+use App\model\entities\Event;
+
 
 
 class RowToObjectConverter
@@ -10,15 +11,15 @@ class RowToObjectConverter
 
     public function __construct($row, $table)
     {
-        $this->object = new Entity();
 
-        $this->object->setProperty("table", $table);
+        $this->object = new Event();
 
-   
+        $this->object->setTable($table);
+
         foreach($row as $key => $value)
         {
             if(gettype($key) !== "integer"){
-                $this->object->setProperty($key,$value);
+                call_user_func_array([ $this->object , "set" . ucfirst($key) ] , [$value]);
             }
         }
 
