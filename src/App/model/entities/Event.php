@@ -15,7 +15,12 @@ class Event implements EntityInterface{
   public string $name = "myName";
   public $id = null;
   public string $table = "event";
-  public string $code = ""
+  public string $code = "";
+
+
+  public function setId(string $id){
+      $this->id = $id;
+  }
 
   public function getId(){
     return $this->id;
@@ -29,8 +34,18 @@ class Event implements EntityInterface{
     return $this->table;
   }
 
+    public function setTable(string $table){
+      $this->table = $table;
+    }
+
   public function getTable(){
     return $this->table;
+  }
+
+  public function setCode(string $code){
+
+    $this->code = $code;
+
   }
 
 }
