@@ -16,6 +16,7 @@ class Event implements EntityInterface{
   public $id = null;
   public string $table = "event";
   public string $code = "";
+  public array $images = [];
 
 
   public function setId(string $id){
@@ -47,6 +48,20 @@ class Event implements EntityInterface{
     $this->code = $code;
 
   }
+
+  public function getCode(){
+
+    return $this->code;
+
+  }
+
+  public function getImages(){
+
+    return $this->images;
+
+  }
+
+
 
 }
 
