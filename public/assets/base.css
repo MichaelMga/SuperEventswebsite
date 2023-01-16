@@ -1,22 +1,4 @@
 
-.mainImage{
-  width: 95%;
-  height: 95%;
-  border-radius: 15px;
-}
-
-.mainImageContainer{
-  margin-top: 40px;
-  margin-left: 5px;
-  width: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  aspect-ratio: 1/1;
- }
-
-
 button{
   cursor:pointer;
 }
@@ -34,21 +16,19 @@ body{
 }
 
 
-.navImg{
-  height: 3.5vh;
-  width: auto;
+
+main{
+ position:absolute;
+ top:7.5%;
+ left:0;
+ height: 100%;
+ width: 100%;
 }
 
 
-.cbImg{
-  height: 80%;
-  width: auto;
-}
+/*navBar */
 
-.newProjectImg{
-  height: 4.25vh;
-  width: auto;
-}
+
 
 #navBar{
   position:fixed;
@@ -93,12 +73,66 @@ body{
   margin-top: 3%;
 }
 
-main{
- position:absolute;
- top:7.5%;
- left:0;
- height: 100%;
- width: 100%;
+
+
+
+ /*Home */
+
+ .homeContainer{
+   background-size:cover;
+   position: absolute; top: 0;
+   left:0; width:100%;
+   min-height: 100%;
+   height:100%; display:flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center
+ }
+
+
+ .homeCenterDiv{
+   height: 60%;
+   width: 80%;
+ }
+
+ .homeCenterDivTextContainer{
+   height: 20%;
+ }
+
+ /*Home */
+
+ .mainImage{
+   width: 95%;
+   height: 95%;
+   border-radius: 15px;
+ }
+
+ .mainImageContainer{
+   margin-top: 30px;
+   width: 33.33%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   aspect-ratio: 1/1;
+  }
+
+
+
+.navImg{
+  height: 3.5vh;
+  width: auto;
+}
+
+
+.cbImg{
+  height: 80%;
+  width: auto;
+}
+
+.newProjectImg{
+  height: 4.25vh;
+  width: auto;
 }
 
 
