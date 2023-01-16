@@ -14,8 +14,9 @@
           <h5>$20.00</h5>
         </div>
       </div>
-      <form action="/create-checkout-session.php" method="POST">
-        <button type="submit" id="checkout-button">Checkout</button>
+      <form action="/AFB/create-checkout-session" method="POST">
+        <input type='text' name='numberOfElements' value='' placeholder="set number of picture to pay">
+        <button type="submit" id="checkout-button">Pay picture(s)</button>
       </form>
     </section>
   </body>

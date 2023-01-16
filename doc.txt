@@ -1,8 +1,0 @@
-
-
-How to handle security? You should be careful with your payment gateway.
-
-That has to be your first concern.
-
-
-So, the clients click on the page.

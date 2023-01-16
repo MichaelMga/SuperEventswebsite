@@ -1,10 +1,10 @@
 <?php
- 
+
   namespace App\Component\HttpComponent;
 
   class Request
   {
-     
+
      private $get;
      private $post;
      private $file;
@@ -27,7 +27,7 @@
 
      }
 
-     
+
 
      public function getGet($param, $alternative){
 
@@ -43,9 +43,9 @@
      }
 
 
-     
+
      public function getPost($param, $alternative){
-   
+
 
       if(isset($this->post[$param])){
 
@@ -61,7 +61,18 @@
 
      public function getUrl(){
 
-            return $this->url;
+        return $this->url;
+
+     }
+
+
+     public function getFile($param, $alternative){
+
+       if(isset($this->file[$param])){
+         return $this->file[$param];
+       } else {
+         return $alternative;
+       }
 
      }
 

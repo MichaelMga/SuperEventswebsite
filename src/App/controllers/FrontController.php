@@ -6,9 +6,6 @@
 
  use App\controllers\abstractClass\AbstractController;
  use App\component\httpComponent\Response;
- use App\model\entities\Entity;
-
- require_once "src/services/database/entityManager.php";
 
 class FrontController extends AbstractController
 {

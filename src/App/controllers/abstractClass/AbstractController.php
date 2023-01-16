@@ -2,19 +2,11 @@
 
 namespace App\controllers\abstractClass;
 use App\Component\HttpComponent\Response;
-use App\model\orm\SuperOrm;
 
-require_once "src/services/database/entityManager.php";
 
 
 abstract class AbstractController
 {
-
-   public function getSuperOrm()
-   {
-      return new SuperOrm();
-   }
-
 
    protected function renderPage($page, $array=[]) : Response
    {
@@ -31,16 +23,4 @@ abstract class AbstractController
       return new Response($content);
 
    }
-
-
-
-
-   public function getEntityManager(){
-
-       global $entityManager;
-
-       return $entityManager;
-
-   }
-
 }

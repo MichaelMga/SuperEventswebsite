@@ -1,11 +1,14 @@
 <?php
 
+ $request = $_ENV["request"];
 
  $routes = [
   rootUrl => ["name" => "home", "controller" => "App\Controllers\FrontController" , "method" =>  "displayPage" , "parameters" => ["home", []]  ] ,
-  rootUrl . 'testEvent' => ["name" => "create", "controller" => "App\Controllers\FrontController" , "method" =>  "displayPage" , "parameters" => ["events/test", []]  ],
+  rootUrl . 'event' => ["name" => "create", "controller" => "App\Controllers\EventController" , "method" =>  "displayEvent" , "parameters" => [$request->getGet("name", ""), []]  ],
   rootUrl . 'payment' => ["name" => "login", "controller" => "App\Controllers\FrontController" , "method" =>  "displayPage" , "parameters" => ["payment/stripeForm", []]  ],
-  rootUrl . 'admin' => ["name" => "admin", "controller" => "App\Controllers\FrontController" , "method" =>  "displayPage" , "parameters" => ["admin/admin", []]  ],
-  rootUrl . 'events/create' => ["name" => "new event", "controller" => "App\Controllers\AdminController" , "method" =>  "createNewEvent" , "parameters" => [$request->getGet("eventName", ""), []]  ],
-  rootUrl . 'events/display' => ["name" => "new event", "controller" => "App\Controllers\AdminController" , "method" =>  "createNewEvent" , "parameters" => [$request->getGet("eventCode", ""), []]  ],
+  rootUrl . 'create-checkout-session' => ["name" => "create session checkout", "controller" => "App\Controllers\PaymentController" , "method" => "displayPaymentPage", "parameters" => [$request->getGet("numberOfElements", 1), $request->getGet("mail", "")]],
+  rootUrl . 'checkout-success' => ["name" => "", "controller" => "App\Controllers\PaymentController", "method" => "renderSuccessCheckoutPage", "parameters" => [$request->getGet("mail", "")]],
+  rootUrl . 'cart' => ["name" => "", "controller" => "App\Controllers\PaymentController", "method" => "renderCartPage", "parameters" => []],
+  rootUrl . 'search' => ["name" => "" , "controller" => "App\controllers\SearchController", "method" => "search" , "parameters" => [$request->getGet("searchValue", "")] ],
+  rootUrl . 'mailForm' => ["name" => "" , "controller" => "App\controllers\MailController", "method" => "renderMailForm" , "parameters" => [] ],
   ];

@@ -1,0 +1,166 @@
+
+.mainImage{
+  width: 95%;
+  height: 95%;
+  border-radius: 15px;
+}
+
+.mainImageContainer{
+  margin-top: 40px;
+  margin-left: 5px;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  aspect-ratio: 1/1;
+ }
+
+
+button{
+  cursor:pointer;
+}
+
+a{
+  cursor:pointer;
+  text-decoration: none;
+  color: rgb(96, 93, 93);
+}
+
+
+body{
+  font-family: 'Arvo', serif;
+  background: #f7f9fc;
+}
+
+
+.navImg{
+  height: 3.5vh;
+  width: auto;
+}
+
+
+.cbImg{
+  height: 80%;
+  width: auto;
+}
+
+.newProjectImg{
+  height: 4.25vh;
+  width: auto;
+}
+
+#navBar{
+  position:fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 7.5%;
+  background: none;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid 1px;
+  border-color: rgb(167, 165, 165);
+}
+
+
+#navBarA{
+  height: 100%;
+  width: 20%;
+}
+
+#navBarA img{
+  height: 65%;
+  width: auto;
+  margin-left: 10%;
+  margin-top: 3%;
+}
+
+#navBarB{
+  height: 100%;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#navBarB img{
+  height: 65%;
+  width: auto;
+  margin-left: 10%;
+  margin-top: 3%;
+}
+
+main{
+ position:absolute;
+ top:7.5%;
+ left:0;
+ height: 100%;
+ width: 100%;
+}
+
+
+#mainDiv{
+  height: 100vh;
+  width: 100vw;
+  display:flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/*  desktop  */
+
+
+.rightCartContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 80%;
+  background: blue;
+  position: fixed;
+  right: 5%;
+  top: 15%;
+  border-radius: 50px;
+}
+
+.mobileCartPaymentContainer{
+  display: none;
+}
+
+
+.cartImgContainer{
+  margin-top: 2.5%;
+  display: flex;
+  align-items: flex-end;
+
+}
+
+.deleteCartButton{
+  height: 20px;
+}
+
+
+
+@media screen and (max-width: 1000px){
+
+  .mobileCartPaymentContainer{
+    position: fixed;
+    top: 80vh;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:20vh;
+    background:blue;
+    border-radius: 0px;
+  }
+  .rightCartContainer{
+    display: none;
+  }
+
+}
