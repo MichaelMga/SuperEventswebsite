@@ -1,3 +1,4 @@
+const cartImagesContainersContainer = document.getElementById('cartImagesContainersContainer');
 
  const addImageToCart = (imageId, image) => {
 
@@ -94,14 +95,13 @@ const displayCookieImages = () => {
        cartImg.setAttribute('id', id);
        cartImg.setAttribute('class', 'mainImage');
        cartImg.setAttribute('src', path);
-       cartImg.setAttribute('style', 'height: 300px; width: 300px;');
 
      const deleteButton = document.createElement('button');
 
        deleteButton.setAttribute('onclick', 'removeImageFromCartOnCartPage("' + id + '")');
        deleteButton.setAttribute('class', 'deleteCartButton');
 
-       deleteButton.innerText = 'supprimer';
+       deleteButton.innerText = '-';
 
     const cartImgContainer = document.createElement('div');
 
@@ -110,7 +110,7 @@ const displayCookieImages = () => {
         cartImgContainer.append(cartImg);
         cartImgContainer.append(deleteButton);
 
-        document.getElementById('cartContainer').append(cartImgContainer);
+        cartImagesContainersContainer.append(cartImgContainer);
 
      });
 };
@@ -211,8 +211,8 @@ const sendMailIfValid = () => {
 
   if(userMail && userMailConfirmation && userMail !== userMailConfirmation){
 
-     alert("mot de passes non identiques");
-     return;
+    alert("desolé, les mails doivent être identiques !");
+    return;
   }
 
   window.location.href = 'http://localhost:8888/AFB/create-checkout-session?numberOfElements=' + document.cookie.split(";").length + `&mail=${userMail}`;
